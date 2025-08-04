@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Global Attributes Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    *[hidden] {
+      display: none;
+    }
+    .tooltip:hover::after {
+      content: attr(title);
+      position: absolute;
+      background: #222;
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-left: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="main-heading" class="tooltip" title="Main Page Title" data-info="heading" contenteditable="true" spellcheck="true" dir="ltr" lang="en" tabindex="0" accesskey="h">
+    Global Attributes in Action
+  </h1>
+
+  <p id="intro" class="tooltip" title="This is a paragraph." contenteditable="true" dir="ltr" lang="en" spellcheck="true" hidden="false" tabindex="1" accesskey="p" data-custom="intro-paragraph">
+    This paragraph uses all the global attributes you can assign to an HTML element.
+  </p>
+
+  <button
+    id="myBtn"
+    class="tooltip"
+    title="Click me!"
+    contenteditable="false"
+    dir="ltr"
+    lang="en"
+    hidden="false"
+    tabindex="2"
+    accesskey="b"
+    spellcheck="false"
+    data-action="submitForm"
+    draggable="true"
+    aria-label="Submit Button">
+    Submit
+  </button>
+
+  <div
+    id="infoBox"
+    class="tooltip"
+    title="Info box"
+    dir="auto"
+    contenteditable="true"
+    lang="en"
+    tabindex="3"
+    accesskey="i"
+    spellcheck="true"
+    data-box="info"
+    style="border: 1px solid #ccc; padding: 10px; margin-top: 20px;">
+    Edit me and see how global attributes work!
+  </div>
+<img  id="infoBox"
+    class="tooltip"
+    title="Info box"
+    dir="auto"
+    contenteditable="true"
+    lang="en"
+    tabindex="3"
+    accesskey="i"
+    spellcheck="true"
+    data-box="info" src="" alt="">
+</body>
+</html>
